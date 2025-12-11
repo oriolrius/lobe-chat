@@ -1,0 +1,39 @@
+---
+title: 在 LobeChat 中使用 Replicate API Key
+description: >-
+  学习如何在 LobeChat 中配置和使用 Replicate API Key，使用 FLUX、FLUX 2 等尖端模型进行 AI 图像生成。
+
+tags:
+  - Replicate
+  - 图像生成
+  - API Key
+  - Web UI
+---
+
+# 在 LobeChat 中使用 Replicate
+
+<Image alt={'在 LobeChat 中使用 Replicate'} cover src={'https://github.com/user-attachments/assets/24a3320b-5981-4e4e-b874-17d587445d48'} />
+
+[Replicate](https://replicate.com/) 是一个让机器学习模型在云端运行变得简单的平台。它托管了来自 Black Forest Labs 的最先进图像生成模型，包括 FLUX 和 FLUX 2 系列。本文将指导你如何在 LobeChat 中使用 Replicate：
+
+<Steps>
+  ### 步骤一：获取 Replicate API Token
+
+  - 注册 [Replicate](https://replicate.com/) 账户；
+  - 前往 [API tokens 页面](https://replicate.com/account/api-tokens)，点击 **Create token** 创建新的 API token；
+  - 复制生成的 API Token 并妥善保存。
+
+  ### 步骤二：在 LobeChat 中配置 Replicate
+
+  - 访问 LobeChat 的 `设置` 页面；
+  - 在 `AI服务商` 下找到 `Replicate` 的设置项；
+
+  - 粘贴获取到的 API Token；
+  - 选择一个 Replicate 模型（如 `FLUX 1.1 Pro`、`FLUX 2 Pro`）用于图像生成。
+
+  <Callout type={'warning'}>
+    在使用过程中，你可能需要向 Replicate 支付相应费用，请在大量调用前查阅 Replicate 的官方计费政策。
+  </Callout>
+</Steps>
+
+至此，你已经可以在 LobeChat 中使用 Replicate 提供的先进图像生成模型来创作精美的视觉内容了。

@@ -825,4 +825,27 @@ NewAPI is a multi-provider model aggregation service that supports automatic mod
 - Default: `-`
 - Example: `-all,+claude-opus-4-1-20250805,+claude-opus-4-20250514=claude-opus-4`
 
+## Replicate
+
+### `REPLICATE_API_KEY`
+
+- Type: Required
+- Description: This is the API token you obtained from Replicate. You can get it from [Replicate API tokens page](https://replicate.com/account/api-tokens).
+- Default: -
+- Example: `r8_xxxxxx...xxxxxx`
+
+### `REPLICATE_PROXY_URL`
+
+- Type: Optional
+- Description: If you manually configure the Replicate API proxy, you can use this configuration item to override the default Replicate API request base URL.
+- Default: `https://api.replicate.com/v1`
+- Example: `https://my-replicate-proxy.com/v1`
+
+### `REPLICATE_MODEL_LIST`
+
+- Type: Optional
+- Description: Used to control the Replicate model list. Use `+` to add a model, `-` to hide a model, and `model_name=display_name` to customize the display name of a model. Separate multiple entries with commas. The definition syntax follows the same rules as other providers' model lists.
+- Default: `-`
+- Example: `-all,+black-forest-labs/flux-1.1-pro,+black-forest-labs/flux-2-pro=FLUX 2 Pro`
+
 [model-list]: /docs/self-hosting/advanced/model-list

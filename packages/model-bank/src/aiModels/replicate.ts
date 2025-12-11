@@ -3,6 +3,72 @@ import { AIImageModelCard } from '../types';
 // Replicate image models
 // https://replicate.com/black-forest-labs
 const imageModels: AIImageModelCard[] = [
+  // FLUX 2 models (latest)
+  {
+    description:
+      'FLUX 2 Pro - High-quality image generation and editing with support for eight reference images.',
+    displayName: 'FLUX 2 Pro',
+    enabled: true,
+    id: 'black-forest-labs/flux-2-pro',
+    parameters: {
+      aspectRatio: {
+        default: '1:1',
+        enum: ['1:1', '16:9', '9:16', '4:3', '3:4', '21:9', '9:21'],
+      },
+      prompt: { default: '' },
+      seed: { default: null },
+    },
+    pricing: {
+      units: [{ name: 'imageGeneration', rate: 0.05, strategy: 'fixed', unit: 'image' }],
+    },
+    releasedAt: '2024-12-01',
+    type: 'image',
+  },
+  {
+    description:
+      'FLUX 2 Dev - Quality image generation and editing with support for reference images.',
+    displayName: 'FLUX 2 Dev',
+    enabled: true,
+    id: 'black-forest-labs/flux-2-dev',
+    parameters: {
+      aspectRatio: {
+        default: '1:1',
+        enum: ['1:1', '16:9', '9:16', '4:3', '3:4', '21:9', '9:21'],
+      },
+      cfg: { default: 3.5, max: 10, min: 1, step: 0.1 },
+      prompt: { default: '' },
+      seed: { default: null },
+      steps: { default: 28, max: 50, min: 1 },
+    },
+    pricing: {
+      units: [{ name: 'imageGeneration', rate: 0.025, strategy: 'fixed', unit: 'image' }],
+    },
+    releasedAt: '2024-12-01',
+    type: 'image',
+  },
+  {
+    description:
+      'FLUX 2 Flex - Max-quality image generation and editing with support for ten reference images.',
+    displayName: 'FLUX 2 Flex',
+    enabled: true,
+    id: 'black-forest-labs/flux-2-flex',
+    parameters: {
+      aspectRatio: {
+        default: '1:1',
+        enum: ['1:1', '16:9', '9:16', '4:3', '3:4', '21:9', '9:21'],
+      },
+      cfg: { default: 3.5, max: 10, min: 1, step: 0.1 },
+      prompt: { default: '' },
+      seed: { default: null },
+      steps: { default: 28, max: 50, min: 1 },
+    },
+    pricing: {
+      units: [{ name: 'imageGeneration', rate: 0.06, strategy: 'fixed', unit: 'image' }],
+    },
+    releasedAt: '2024-12-01',
+    type: 'image',
+  },
+  // FLUX 1 models
   {
     description:
       'FLUX 1.1 Pro - Faster, better FLUX Pro with excellent image quality and prompt adherence.',
